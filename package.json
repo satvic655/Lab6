@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint app.js app.test.js",
     "test": "jest",
-    "build": "mkdir dist && copy app.js dist\\app.js"
+    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true});require('fs').copyFileSync('app.js','dist/app.js')\""
   },
   "keywords": [],
   "author": "",
